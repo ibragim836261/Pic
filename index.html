@@ -1,0 +1,75 @@
+html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пробив данных</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c6bed;
+        }
+        
+        form {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        input[type="tel"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #2c6bed;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #2c6bed;
+        }
+        
+        .data-item {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Пробив данных по номеру телефона</h1>
+        <form id="phoneForm">
+            <input type="tel" placeholder="+7 (XXX) XXX-XX-XX" required>
+            <button type="submit">Получить данные</button>
+        </form>
+
+        <div class="result" style="display: none;">
+            <div class="data-item"><strong>ФИО:</strong> <span id="name"></span></div>
+            <div class="data-item"><strong>Адрес:</strong> <span id="address"></span></div>
+            <div class="data-item"><strong>Оператор связи:</strong> <span id="operator"></span></div>
+            <div class="data-item"><strong>Соц. сети:</strong> <span id="social"></span></div>
+            <div class="data-item"><strong>Судимость:</strong> <span id="criminal"></span><
